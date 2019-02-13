@@ -46,7 +46,6 @@ public class Conductores {
     }
 
     /* ---- Setters ---- */
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -63,15 +62,21 @@ public class Conductores {
         this.ocupado = ocupado;
     }
 
-    public void setValoraciones(double valoracion) {
+    public void setValoracion(double valoracion) {
         this.valoraciones.add(valoracion);
     }
 
-    private void calcularValoraciónMedia() {
+    public void setValoracionMedia() {
+        this.valoracionMedia = calcularValoraciónMedia(this.valoraciones);
+    }
+
+    private double calcularValoraciónMedia(List<Double> valoraciones) {
+        double valoracionMedia = 0;
         double sumaValoraciones = 0;
-        for (double valoracion : this.valoraciones) {
+        for (double valoracion : valoraciones) {
             sumaValoraciones += valoracion;
         }
-        this.valoracionMedia = sumaValoraciones / this.valoraciones.size();
+        valoracionMedia = sumaValoraciones / this.valoraciones.size();
+        return valoracionMedia;
     }
 }
