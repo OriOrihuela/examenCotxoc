@@ -7,7 +7,7 @@ public class Tarifa {
     /* ---- Properties ---- */
     final static double costeMilla = 1.35;
     final static double costeMinuto = 0.35;
-    final static double costeMínimo = 5.0;
+    final static double costeMinimo = 5.0;
     final static double porcentajeComisión = 0.20;
 
     /* ---- Getters ---- */
@@ -19,7 +19,12 @@ public class Tarifa {
         return costeMinuto * tiempo;
     }
 
-    /*public double getCosteTotalEsperado(Carrera carrera) {
-        double costeTotal =
-    }*/
+    public static double getCosteTotalEsperado(Carrera carrera) {
+        double costeTotal = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoEsperado());
+        if (costeTotal > costeMinimo) {
+            return costeTotal;
+        } else {
+            return costeMinimo;
+        }
+    }
 }
