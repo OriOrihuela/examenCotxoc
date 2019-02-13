@@ -33,7 +33,7 @@ public class Conductores {
         return this.modelo;
     }
 
-    public double getValoracionMedia() {
+    public double getValoracion() {
         return this.valoracionMedia;
     }
 
