@@ -1,6 +1,7 @@
 package org.lasencinas.carrera;
 
 import org.lasencinas.conductores.Conductores;
+import org.lasencinas.conductores.PoolConductores;
 import org.lasencinas.tarifa.Tarifa;
 
 public class Carrera {
@@ -11,6 +12,7 @@ public class Carrera {
 
     private double costeTotal = 0;
     private double distancia = 0;
+    private double propina = 0;
 
     private String tarjetaCredito = null;
     private String origen = null;
@@ -53,7 +55,45 @@ public class Carrera {
         return this.tiempoCarrera;
     }
 
+    public double getPropina() {
+        return this.propina;
+    }
+
+    public Conductores getConductor() {
+        return this.conductor;
+    }
+
     public double getCosteEsperado() {
         return Tarifa.getCosteTotalEsperado(this);
+    }
+
+    /* ---- Setters ---- */
+
+    public void realizarPago(double pago) {
+        this.costeTotal = pago;
+    }
+
+    public void recibirPropina(double propina) {
+        this.propina = propina;
+    }
+
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
+    }
+
+    public void setTiempoEsperado(int tiempo) {
+        this.tiempoEsperado = tiempo;
+    }
+
+    public void setConductor(Conductores conductor) {
+        this.conductor = conductor;
+    }
+
+    public void asignarConductor(PoolConductores conductor) {
+        setConductor(conductor.asignarConductor());
+    }
+
+    public void liberarConductor() {
+        getConductor().setOcupado(false);
     }
 }
