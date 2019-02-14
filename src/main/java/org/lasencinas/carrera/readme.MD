@@ -1,10 +1,10 @@
 # Clase Carrera
 ## ATRIBUTOS
 - crea las variables de instancia que estimes oportunas.
-- tiempoEsperado del trayecto
-- tiempoCarrera tiempo real empleado en el trayecto
-- costeTotal real del trayecto
-- conductor asignado a la carrera
+- *tiempoEsperado* del trayecto
+- *tiempoCarrera* tiempo real empleado en el trayecto
+- *costeTotal* real del trayecto
+- *conductor* asignado a la carrera
 ## MÉTODOS
 - *getTarjetaCredito()* devuelve el número de la tarjeta de crédito del usuario/a.
 - *getOrigen()* devuelve el lugar de origen del trayecto.
