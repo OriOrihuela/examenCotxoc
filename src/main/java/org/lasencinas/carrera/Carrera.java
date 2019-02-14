@@ -21,13 +21,12 @@ public class Carrera {
     private Conductores conductor = null;
 
     /* ---- Constructor ---- */
-    public Carrera(int tiempoEsperado, double distancia) {
-        this.tiempoEsperado = tiempoEsperado;
-        this.distancia = distancia;
+    public Carrera(String tarjetaCredito) {
+        this.tarjetaCredito = tarjetaCredito;
     }
 
     /* ---- Getters ---- */
-    public String getTarjetaCredito(String tarjeta) {
+    public String getTarjetaCredito() {
         return this.tarjetaCredito;
     }
 
@@ -83,6 +82,14 @@ public class Carrera {
 
     public void setTiempoEsperado(int tiempo) {
         this.tiempoEsperado = tiempo;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public void setOrigen(String origen) {
+        this.origen = origen;
     }
 
     public void setConductor(Conductores conductor) {
