@@ -11,19 +11,19 @@ public class CarreraTest {
 
     @Before
     public void __init__() {
-        carrera = new Carrera(0, 0);
+        carrera = new Carrera("345345354");
     }
 
     @Test
     public void constructorTest() {
-        carrera = new Carrera(20, 50);
+        carrera.setTiempoEsperado(20);
+        carrera.setDistancia(50);
         assertEquals(20, carrera.getTiempoEsperado());
         assertEquals(50, carrera.getDistancia(), 0.01);
     }
 
     @Test
     public void realizarPagoTest() {
-        carrera = new Carrera(20, 20);
         carrera.realizarPago(34);
         assertEquals(carrera.getCosteEsperado(), carrera.getCosteTotal(), 0.01);
 
@@ -31,7 +31,6 @@ public class CarreraTest {
 
     @Test
     public void realizarPagotest2() {
-        carrera = new Carrera(1,1);
         carrera.realizarPago(5);
         assertEquals(carrera.getCosteEsperado(), carrera.getCosteTotal(), 0.01);
     }

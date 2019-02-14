@@ -15,7 +15,7 @@ public class TarifaTest {
 
     @Before
     public void __init__() {
-        carrera = new Carrera(0, 0);
+        carrera = new Carrera("345345");
     }
 
     @Test
@@ -34,14 +34,14 @@ public class TarifaTest {
 
     @Test
     public void getCosteTotalEsperadoTest() {
-        Carrera carrera = new Carrera(30, 12.54);
+        Carrera carrera = new Carrera("345345");
         double costeTotal = 30 * 0.35 + 12.54 * 1.35;
         assertEquals(costeTotal, Tarifa.getCosteTotalEsperado(carrera), 0.01);
     }
 
     @Test
     public void getCosteTotalMínimoTest() {
-        Carrera carrera = new Carrera(1,1);
+        Carrera carrera = new Carrera("345345");
         double costeMinimo = 5;
         assertEquals(costeMinimo, Tarifa.getCosteTotalEsperado(carrera), 0.01);
     }

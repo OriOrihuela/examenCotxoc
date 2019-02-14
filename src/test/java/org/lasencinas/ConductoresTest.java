@@ -32,6 +32,6 @@ public class ConductoresTest {
             conductor.setValoracion(valoracion);
         }
         conductor.setValoracionMedia();
-        assertEquals(5.4125, conductor.getValoracionMedia(), 0.01);
+        assertEquals(5.4125, conductor.getValoracion(), 0.01);
     }
 }

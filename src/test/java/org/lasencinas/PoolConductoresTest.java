@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class PoolConductoresTest {
 
-    Carrera carrera = new Carrera(20, 20);
+    Carrera carrera = new Carrera("345345");
 
     @Test
     public void asignarConductorTest() {
