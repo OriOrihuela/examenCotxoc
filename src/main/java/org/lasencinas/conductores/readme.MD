@@ -1,16 +1,16 @@
-Clase Conductor
-ATRIBUTOS
-nombre del conductor
-modelo modelo del coche
-matricula
-valoracionMedia valoraciÛn media del conductor
-valoraciones array de longitud variable que almacena todas las valoraciones del conductor
-ocupado indica si el conductor est· prestando un servicio o est· libre.
-M…TODOS
-setValoracion(valoracion) aÒade la nueva valoraciÛn y actualiza la valoraciÛn media del conductor.
-Clase PoolConductores
-ATRIBUTOS
-poolConductores es un array de longitud variable de conductores
-M…TODOS
-El constructor PoolConductores(conductores) recibe un array de longitud variable de conductores.
-asignarConductor()selecciona un conductor libre entre la flota y lo devuelve, estableciendo que ese conductor est· ahora ocupado.
+# Clase Conductor
+## ATRIBUTOS
+- *nombre* del conductor
+- *modelo* modelo del coche
+- *matricula*
+- *valoracionMedia* valoraci√≥n media del conductor
+- *valoraciones* array de longitud variable que almacena todas las valoraciones del conductor
+- *ocupado* indica si el conductor est√° prestando un servicio o est√° libre.
+## M√âTODOS
+- *setValoracion(valoracion)* a√±ade la nueva valoraci√≥n y actualiza la valoraci√≥n media del conductor.
+# Clase PoolConductores
+## ATRIBUTOS
+- *poolConductores* es un array de longitud variable de **conductores**.
+## M√âTODOS
+- El constructor *PoolConductores(conductores)* recibe un array de longitud variable de conductores.
+- *asignarConductor()* selecciona un conductor **libre** entre la flota y lo devuelve, estableciendo que ese conductor est√° ahora **ocupado**.
